@@ -29,7 +29,7 @@ A Discord bot that welcomes new members **only when they send their very first m
 
 # 📷 Preview
 
-<img src="./assets/welcome.png" width="700">
+
 
 ---
 
