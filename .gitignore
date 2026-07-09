@@ -1,0 +1,4 @@
+node_modules/
+.envgit status
+data/pending.json
+data/welcomed.json
