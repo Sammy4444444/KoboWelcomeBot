@@ -3,7 +3,7 @@
 # 🎉 Kobo Welcome Bot
 
 <p align="center">
-  <img src="assets/welcome.png" alt="Kobo Welcome Bot" width="700">
+  <img src="https://raw.githubusercontent.com/Sammy4444444/KoboWelcomeBot/main/assets/welcome.png" alt="Kobo Welcome Bot" width="700">
 </p>
 
 A Discord bot that welcomes new members **only when they send their very first message**, making the first interaction feel natural instead of interrupting them immediately after joining.
