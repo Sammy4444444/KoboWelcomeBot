@@ -29,6 +29,10 @@ A Discord bot that welcomes new members **only when they send their very first m
 
 # 📷 Preview
 
+<p align="center">
+  <img src="assets/preview.png" alt="Bot Preview" width="800">
+</p>
+
 
 
 ---
