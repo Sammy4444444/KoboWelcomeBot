@@ -46,12 +46,12 @@ client.on(Events.MessageCreate, async (message) => {
     if (!pending[message.author.id]) return;
     if (welcomed[message.author.id]) return;
 
-    const poster = new AttachmentBuilder("./assets/welcome.png");
+    const poster = new AttachmentBuilder("./assets/welcome3.png");
 
     await message.reply({
         content:
-`# 🎉 Welcome <@${message.author.id}>!
-SELAMAT DATANG DI KAWAN KITA`,
+`#  Welcome <@${message.author.id}>!
+NGE LARP LAH SAMPAI MATI`,
         files: [poster]
     });
 
@@ -65,6 +65,6 @@ SELAMAT DATANG DI KAWAN KITA`,
     console.log(`${message.author.tag} berhasil di-welcome.`);
 });
 
-    
+     
 client.login(process.env.TOKEN);
 
