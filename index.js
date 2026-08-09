@@ -8,6 +8,7 @@ const {
 } = require("discord.js");
 
 const fs = require("fs-extra");
+const { chatWithKacung } = require("./commands/chat");
 
 const client = new Client({
     intents: [
@@ -63,6 +64,34 @@ NGE LARP LAH SAMPAI MATI`,
     await fs.writeJson("./data/welcomed.json", welcomed, { spaces: 4 });
 
     console.log(`${message.author.tag} berhasil di-welcome.`);
+});
+
+client.on(Events.MessageCreate, async (message) => {
+    if (message.author.bot) return;
+
+    if (!message.mentions.has(client.user)) return;
+
+    const userMessage = message.content
+        .replace(`<@${client.user.id}>`, "")
+        .trim();
+
+    if (!userMessage) {
+        return message.reply("iya? manggil doang? 😭");
+    }
+
+    try {
+        await message.channel.sendTyping();
+
+        const reply = await chatWithKacung(userMessage);
+
+        await message.reply(reply);
+    } catch (error) {
+        console.error("Gemini Error:", error);
+
+        await message.reply(
+            "anjir, otak AI gua lagi ngadat. coba lagi bentar."
+        );
+    }
 });
 
      
